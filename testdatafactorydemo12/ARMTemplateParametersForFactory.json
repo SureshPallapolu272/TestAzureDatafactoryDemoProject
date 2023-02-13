@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "testdatafactorydemo12"
+		},
+		"AzureTableStorage1_connectionString": {
+			"value": ""
+		},
+		"LS_ADLSConnection_accountKey": {
+			"value": ""
+		},
+		"LS_BlobConnection_connectionString": {
+			"value": ""
+		},
+		"LS_SQLConnection_connectionString": {
+			"value": ""
+		},
+		"LS_ADLSConnection_properties_typeProperties_url": {
+			"value": "https://testazuredatalakegen2012.dfs.core.windows.net/"
+		},
+		"LS_HTTPConnection_properties_typeProperties_url": {
+			"value": "@{linkedService().baseURL}"
+		},
+		"LS_RESTConnector_properties_typeProperties_url": {
+			"value": "@{linkedService().baseurl}"
+		},
+		"TR_EventTrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/0b09d9a2-10b0-4bdb-966c-fa3ebfa3ba0a/resourceGroups/TestRG002/providers/Microsoft.Storage/storageAccounts/testblobstoragedemo012"
+		},
+		"AzureKeyVaultPE_properties_privateLinkResourceId": {
+			"value": "/subscriptions/0b09d9a2-10b0-4bdb-966c-fa3ebfa3ba0a/resourceGroups/TestRG002/providers/Microsoft.KeyVault/vaults/testkeyvaultdemo012"
+		},
+		"AzureKeyVaultPE_properties_groupId": {
+			"value": "vault"
+		},
+		"AzureKeyVaultPE_properties_fqdns": {
+			"value": [
+				"testkeyvaultdemo012.vault.azure.net"
+			]
+		},
+		"Blob_ManagedPE_properties_privateLinkResourceId": {
+			"value": "/subscriptions/0b09d9a2-10b0-4bdb-966c-fa3ebfa3ba0a/resourceGroups/TestRG002/providers/Microsoft.Storage/storageAccounts/testblobstoragedemo012"
+		},
+		"Blob_ManagedPE_properties_groupId": {
+			"value": "blob"
+		},
+		"Blob_ManagedPE_properties_fqdns": {
+			"value": [
+				"testblobstoragedemo012.blob.core.windows.net"
+			]
+		}
+	}
+}
